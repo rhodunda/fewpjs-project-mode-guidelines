@@ -1,0 +1,145 @@
+/* css variables for theming */
+:root {
+    --main-bg-color: rgb(255, 255, 225);
+    --alt-bg-color: rgba(255, 255, 250);
+    --main-font-color: rgb(0, 0, 0);
+    --alt-font-color: rgb(255, 255, 255);
+    --theme-primary: rgba(0,0,255);
+    --theme-primary-gradient: linear-gradient(90deg, rgba(0, 102, 255) 0%, rgba(255, 215, 0) 95%);
+    --box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  }
+  
+  
+  /* mini reset */
+  * {
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+  }
+  
+  /* layout */
+  body {
+    font-family: 'Open Sans', sans-serif;
+    color: var(--main-font-color);
+    font-size: 14px;
+    transition: all 0.5s;
+    background-color: var(--main-bg-color);
+  }
+  
+  .container {
+    display: flex;
+    max-width: 90%;
+    margin: 2rem auto;
+  } 
+  
+   .flexbox-container {
+      display: flex;
+      flex-direction: column; 
+      justify-content: space-around;
+   }
+
+  .flexbox-item {
+      width: 150px;
+      margin: 50px;
+      border: 3px solid #333;
+      background-color: #f0e68c;
+  }
+  
+  /* menu  */
+   #menu {
+    padding: 1rem;
+    color: var(--alt-font-color);
+    background: var(--theme-primary-gradient);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: var(--box-shadow);
+  }
+  
+
+  
+  /* sidebar */
+  aside {
+    width: 15%;
+    min-width: 300px;
+    border-right: 1px solid #ccc;
+    padding: 10 1rem;
+  }
+  
+  .navbar {
+      width: 5rem;
+      height: 100vh;
+      padding: 0;
+      margin: 0;
+      position: fixed;
+      flex-direction: column;
+      align-items: center;
+      height: 100%;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  /* #sign-up */
+  #sign-up {
+    background-color: var(--alt-bg-color);
+    box-shadow: var(--box-shadow);
+  }
+  
+  #sign-up h2 {
+    background: var(--theme-primary);
+    color: var(--alt-font-color);
+    margin: 0;
+    padding: 0.5em 1em;
+  }
+  
+  #sign-up form {
+    padding: 1em;
+  }
+  
+  #sign-up form input,
+  #sign-up form textarea,
+  #sign-up form select {
+    background-color: var(--alt-bg-color);
+    font-size: 1rem;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid var(--theme-primary);
+    padding: 0.5em 1em;
+    margin: 1em 0 0.25em;
+    transition: all 0.2s;
+  }
+  
+  #sign-up form input:focus,
+  #sign-up form textarea:focus,
+  #sign-up form select:focus {
+    outline: none;
+    border-bottom: 3px solid var(--theme-primary);
+    font-size: 1.25em;
+  }
+  
+  #sign-up form textarea {
+    resize: vertical;
+  }
+  
+  #sign-up form input[type=submit] {
+    font-size: 1rem;
+    margin: 1em 0 0 0;
+    width: auto;
+    background-color: var(--theme-primary);
+    color: var(--alt-font-color);
+  }
+
+  
