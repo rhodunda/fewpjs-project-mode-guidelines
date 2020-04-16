@@ -10,7 +10,7 @@
   }
   
   
-  /* mini reset */
+  
   * {
     margin: 0;
     border: 0;
@@ -26,120 +26,159 @@
     background-color: var(--main-bg-color);
   }
   
-  .container {
+  /* .container {
     display: flex;
     max-width: 90%;
     margin: 2rem auto;
-  } 
+    
+  }  */
   
-   .flexbox-container {
+   /* .flexbox-container {
       display: flex;
       flex-direction: column; 
       justify-content: space-around;
-   }
+     
+      
+   } */
 
-  .flexbox-item {
+  /* .flexbox-item {
       width: 150px;
-      margin: 50px;
-      border: 3px solid #333;
-      background-color: #f0e68c;
-  }
-  
-  /* menu  */
-   #menu {
-    padding: 1rem;
-    color: var(--alt-font-color);
-    background: var(--theme-primary-gradient);
+      margin: 100px;
+      border: 3px solid blue ;
+      background-color: rgba(255, 215, 0);
+  } */
+
+
+nav{
     display: flex;
+    justify-content: space-around;
     align-items: center;
-    justify-content: space-between;
-    box-shadow: var(--box-shadow);
-  }
-  
+    min-height: 8vh;
+    background-color: rgba(255, 215, 0) ;
+}
+.flex-nav {
+    color: blue;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 25px;
+}
 
-  
-  /* sidebar */
-  aside {
-    width: 15%;
-    min-width: 300px;
-    border-right: 1px solid #ccc;
-    padding: 10 1rem;
-  }
-  
-  .navbar {
-      width: 5rem;
-      height: 100vh;
-      padding: 0;
-      margin: 0;
-      position: fixed;
-      flex-direction: column;
-      align-items: center;
-      height: 100%;
-  }
+.navbar-nav {
+    display: flex;
+    justify-content: space-around;
+    width: 40%;
 
+}
 
+.navbar-nav li{
+    list-style: none;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  /* #sign-up */
-  #sign-up {
-    background-color: var(--alt-bg-color);
-    box-shadow: var(--box-shadow);
-  }
-  
-  #sign-up h2 {
-    background: var(--theme-primary);
-    color: var(--alt-font-color);
-    margin: 0;
-    padding: 0.5em 1em;
-  }
-  
-  #sign-up form {
-    padding: 1em;
-  }
-  
-  #sign-up form input,
-  #sign-up form textarea,
-  #sign-up form select {
-    background-color: var(--alt-bg-color);
-    font-size: 1rem;
-    width: 100%;
+.navbar-nav button{
+    color: rgb(255, 255, 225);
+    background-color: blue;
     border: none;
-    border-bottom: 2px solid var(--theme-primary);
-    padding: 0.5em 1em;
-    margin: 1em 0 0.25em;
-    transition: all 0.2s;
+    text-decoration: name;
+    letter-spacing: 1px;
+    font-weight: bold;
+    font-size: 15px;
+}
+  
+  /* .modal-gb{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden; 
+    opacity: 0; 
+  }
+   .gb-active{
+    visibility: visible;
+    opacity: 1;
+  } 
+
+  .sign-up{
+    position: relative;
+    background-color: rgba(255, 215, 0);
+    width: 30%;
+    height: 30%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .modal-close{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-weight: bold;
+    cursor: pointer;
   }
   
-  #sign-up form input:focus,
-  #sign-up form textarea:focus,
-  #sign-up form select:focus {
-    outline: none;
-    border-bottom: 3px solid var(--theme-primary);
-    font-size: 1.25em;
+  .modal-gb2{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden; 
+    opacity: 0; 
   }
-  
-  #sign-up form textarea {
-    resize: vertical;
+
+  .gb-active2{
+    visibility: visible;
+    opacity: 1;
+  } 
+
+
+  .checkout-table{
+    position: relative;
+    background-color: rgba(255, 215, 0);
+    width: 30%;
+    height: 30%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
   }
-  
-  #sign-up form input[type=submit] {
-    font-size: 1rem;
-    margin: 1em 0 0 0;
-    width: auto;
-    background-color: var(--theme-primary);
-    color: var(--alt-font-color);
-  }
+
+
+  .modal-close2{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.checkout-table{
+  border: 1px solid black;
+}
+
+.checkout-table th,tr,td{
+  border: 1px solid black;
+} */
+
+
+
+
+
+
+
+
+
+
+
+
 
   
