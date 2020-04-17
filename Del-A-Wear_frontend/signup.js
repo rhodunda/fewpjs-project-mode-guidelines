@@ -1,6 +1,9 @@
 function requestSignupForm() {
+    // could refactor
+    // event listener
     let signUpRequest = document.querySelector(".Signup-btn")
    signUpRequest.addEventListener('click', function(e) {
+       // clearing buttons
     let products = document.querySelector("#products")
     products.innerHTML = ''
     let signUp = document.querySelector("#div-account")
@@ -15,6 +18,7 @@ function requestSignupForm() {
 }
     
    function createSignupForm() {
+       //creating form
      let signUp = document.querySelector(".sign-up")
         signUp.innerHTML = `
                 <h3>Sign Up</h3>
@@ -30,6 +34,7 @@ function requestSignupForm() {
 
 
 function signUpEventListener() { 
+    // signUp submit
     let signUpForm = document.querySelector("#new-user-form")
 
 signUpForm.addEventListener('submit', function(e) {
@@ -47,8 +52,6 @@ signUpForm.addEventListener('submit', function(e) {
         money: inputDeposit,
         
     }
-    let signUp = document.querySelector(".sign-up")
-    signUp.innerHTML = ''
     signUpFetch(newUser)
     signUpForm.reset()
 })
@@ -66,7 +69,7 @@ function signUpFetch(newUser) {
     .then(resp => resp.json())
     .then(data => {
         console.log(data)
-        // window.localStorage['user_id'] = data.id
+        window.localStorage['user_id'] = data.id
         
     currentUser(newUser)
     fetchProducts()

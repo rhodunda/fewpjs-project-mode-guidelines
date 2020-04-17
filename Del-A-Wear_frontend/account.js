@@ -1,4 +1,5 @@
 function requestAccount() {
+    // clearing  
     let accountBtn = document.querySelector(".account")
     accountBtn.addEventListener('click', function(){
         let products = document.querySelector("#products")
@@ -15,15 +16,17 @@ function requestAccount() {
 }
 
 function account() {
+    // creaing account 'page'
     let accountDiv = document.querySelector("#div-account")
+    accountDiv.innerHTML = ''
     deleteBtn = document.createElement('button')
     deleteBtn.innerText = "Delete Account"
     deleteBtn.id = "Delete-Account"
     backBtn = document.createElement('button')
     backBtn.innerText = "back"
     backBtn.id = "account-backBtn"
-    data = localStorage.getItem('user')
-    userData = JSON.parse(data)
+    let data = localStorage.getItem('user')
+    let userData = JSON.parse(data)
     accountInfoName = document.createElement('li')
     accountInfoName.innerText = userData.name
     accountInfoEmail = document.createElement('li')
@@ -36,24 +39,32 @@ function account() {
 }
 
 function accountEventListener() {
+    // delete
     let account = document.querySelector("#Delete-Account")
     account.addEventListener('click', function(){
+        fetchAccountDelete()
 
-
-
-
-        let clearAccount = document.querySelector("#div-account")
-        clearAccount.innerHTML = ''
         fetchProducts()
     })
 }
 
 function accountBackEventListener() {
+    // back button 
     let back = document.querySelector("#account-backBtn")
     back.addEventListener('click', function() {
+        
 
-        let clearAccount = document.querySelector("#div-account")
-        clearAccount.innerHTML = ''
         fetchProducts()
     })
 }
+
+function fetchAccountDelete() {
+ let userID = localStorage.user_id
+    fetch(`http://localhost:3000/users/${userID}`, {
+        method: 'DELETE'
+        
+    })
+    localStorage.clear('user_id')
+    }
+
+

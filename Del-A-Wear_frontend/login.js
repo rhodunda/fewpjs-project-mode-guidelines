@@ -1,4 +1,5 @@
 function requestLogoutForm() {
+    // clearing buttons
     logoutBtn = document.querySelector(".logout")
     logoutBtn.addEventListener('click', function(e){
         let products = document.querySelector("#products")
@@ -14,11 +15,16 @@ function requestLogoutForm() {
 }
 
 function CreatingLoginForm() {
-    loginDiv = document.querySelector("#login-form")
-    let logoutH3 = document.createElement('h3')
-    logoutH3.innerText = 'Logout'
+    //creating login
     let loginForm = document.createElement('form')
     loginForm.id = "LoginForm"
+   
+    
+    
+
+    let logoutH3 = document.createElement('h3')
+    logoutH3.innerText = 'Logout'
+    
     let nameInput = document.createElement('input')
     nameInput.type = "text"
     nameInput.name = "name"
@@ -29,18 +35,23 @@ function CreatingLoginForm() {
     emailInput.placeholder = "Email..."
     let submitBtnInput = document.createElement('button')
     submitBtnInput.innerText = "login"
-
+    // apending
+    loginDiv = document.querySelector("#div-login")
+    loginDiv.innerHTML = '' 
     loginForm.append(nameInput, emailInput, submitBtnInput)
     loginDiv.append(logoutH3, loginForm)
     
+    
     loginEventlistener()
+    
 }
 
 function loginEventlistener() {
-    loginSelected = document.querySelector("#LoginForm")
+    //login event listener
+    loginSelecteds = document.querySelector("#LoginForm")
     loginSelected.addEventListener('submit', function(e) {
         e.preventDefault()
-        
+        loginSelecteds.innerHTML = ""
         userName = e.target.name.value
         userEmail = e.target.email.value
 
@@ -48,16 +59,15 @@ function loginEventlistener() {
             name: userName,
             email: userEmail
         }
-        loginDiv = document.querySelector("#login-form")
-        loginDiv.innerHTML = ''
-        loginSelected.reset()
         loginFetch(loginUser)
         fetchProducts()
+        loginSelected.reset()
     })
 
 }
 
 function loginFetch(loginUser) {
+    // login fetch 
     fetch('http://localhost:3000/users/login', {
         method: 'POST',
         headers: {
@@ -67,7 +77,6 @@ function loginFetch(loginUser) {
     })
     .then(resp => resp.json())
     .then(data => {
-       
         currentUser(data)
     })
 }
